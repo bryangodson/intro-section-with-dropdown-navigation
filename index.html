@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>SNAP</title>
+  </head>
+  <body>
+    <!-- container for the whole code -->
+    <div class="container">
+      <!-- menu bar starts here -->
+      <aside>
+      <div class="menu-bar">
+        <div class="right-side">
+          <section class="icon-close-menu">
+            <img src="./images/icon-close-menu.svg" alt="" />
+          </section>
+          <div class="top-menu">
+            <section class="features">
+              <h2>Features</h2>
+              <img src="./images/icon-arrow-up.svg" alt="" />
+            </section>
+            <div class="sub-menu-items">
+              <section>
+                <img src="./images/icon-todo.svg" alt="" />
+                <p>Todo List</p>
+              </section>
+              <section>
+                <img src="./images/icon-calendar.svg" alt="" />
+                <p>Calendar</p>
+              </section>
+              <section>
+                <img src="./images/icon-reminders.svg" alt="" />
+                <p>Reminders</p>
+              </section>
+              <section>
+                <img src="./images/icon-planning.svg" alt="" />
+                <p>Planning</p>
+              </section>
+            </div>
+          </div>
+          <div class="second-menu">
+            <section class="company">
+              <h2>Company</h2>
+              <img src="./images/icon-arrow-up.svg" alt="" />
+            </section>
+            <div class="sub-menu-items">
+              <section>
+                <a href="#">History</a>
+              </section>
+              <section>
+                <a href="#">Our Team</a>
+              </section>
+              <section>
+                <a href="#">Blog</a>
+              </section>
+            </div>
+          </div>
+          <div class="third-menu">
+            <a href="#">Career</a>
+            <a href="#">About</a>
+          </div>
+          <div class="last-menu">
+            <a href="#">Login</a>
+            <a href="#">Register</a>
+          </div>
+        </div>
+      </div>
+      </aside>
+      <!-- menu bar ends here -->
+      <!-- this is the header for the site -->
+      <header>
+        <!-- logo -->
+        <div class="logo-and-links">
+        <img src="./images/logo.svg" alt="snap_logo" />
+        <!-- links for desktop -->
+        <div class="links">
+          <div class="link-item desktop-feature">
+            <h3>Features</h3>
+            <img src="./images/icon-arrow-up.svg" alt="">
+            <div class="menu-list">
+               
+              <section>
+                <img src="./images/icon-todo.svg" alt="" />
+                <p>Todo List</p>
+              </section>
+              <section>
+                <img src="./images/icon-calendar.svg" alt="" />
+                <p>Calendar</p>
+              </section>
+              <section>
+                <img src="./images/icon-reminders.svg" alt="" />
+                <p>Reminders</p>
+              </section>
+              <section>
+                <img src="./images/icon-planning.svg" alt="" />
+                <p>Planning</p>
+              </section>
+           
+            </div>
+          </div>
+          <div class="link-item desktop-company">
+             <h3>Company</h3>
+            <img src="./images/icon-arrow-up.svg" alt="">
+            <div class="menu-list">
+              <section>
+                <a href="#">History</a>
+              </section>
+              <section>
+                <a href="#">Our Team</a>
+              </section>
+              <section>
+                <a href="#">Blog</a>
+              </section>
+            </div>
+          </div>
+          <div class="link-item">
+            <a href="#">Careers</a>
+          </div>
+          <div class="link-item">
+            <a href="#">About</a>
+          </div>
+          
+        </div>
+
+      </div>
+        <div  class="login-and-register">
+          <a href="#">Login</a>
+          <a href="#">Register</a>
+
+        </div>
+        <!-- menu icon for mobile -->
+        <img src="./images/icon-menu.svg" alt="" class="icon-menu" />
+      </header>
+      <!-- header ends here and the hero section follows -->
+      <main>
+      <div class="middle">
+        <div class="hero-section-image-container">
+          <img src="./images/image-hero-mobile.png" alt="" />
+          <img src="./images/image-hero-desktop.png" alt="" />
+        </div>
+        <div class="last-part-of-hero">
+          <h1>Make remote work</h1>
+          <p>
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <a href="#">Learn more</a>
+          <section class="clients">
+            <img src="./images/client-databiz.svg" alt="" />
+            <img src="./images/client-audiophile.svg" alt="" />
+            <img src="./images/client-meet.svg" alt="" />
+            <img src="./images/client-maker.svg" alt="" />
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>credits to <a href="https://www.frontendmentor.io">Frontend mentor</a></p>
+    <p>made by <a href="https://www.bryantechs.world">Bryan Benson</a></p>
+  </footer>
+    <script>
+      // variables for toggle menu
+      let menu_button = document.querySelector(".icon-menu");
+      let menu_bar = document.querySelector(".menu-bar");
+      // listening for click events and showing menu
+      menu_button.addEventListener("click", () => {
+        menu_bar.classList.toggle("active");
+      });
+      // listening for click events on the close button and closing the menu
+      let close_button = document.querySelector(".icon-close-menu");
+      close_button.addEventListener("click", () => {
+        menu_bar.classList.toggle("active");
+      });
+      // variables for toggling the menu items and sub menus
+      let features,
+        company,
+        top_menu_submenu,
+        second_menu_submenu,
+        top_menu,
+        second_menu,
+        featureImage,
+        companyImage,
+        desktop_feature,
+        desktop_company,
+        desktop_feature_menu_list,
+        desktop_company_menu_list
+        ;
+      features = document.querySelector(".features");
+      company = document.querySelector(".company");
+      featureImage = document.querySelector(".features img");
+      companyImage = document.querySelector(".company img");
+      top_menu_submenu = document.querySelector(".top-menu .sub-menu-items");
+      second_menu_submenu = document.querySelector(
+        ".second-menu .sub-menu-items"
+      );
+      // function to show the fature sub menus
+      const showFeature = () => {
+        top_menu_submenu.classList.toggle("active");
+        top_menu = document.querySelector(".top-menu");
+        top_menu.style.height = top_menu.offsetHeight == 180 ? "40px" : "180px";
+        featureImage.classList.toggle("rotate");
+      };
+      // calling the function
+      showFeature();
+      // function to show company menus
+      const showCompany = () => {
+        second_menu_submenu.classList.toggle("active");
+        second_menu = document.querySelector(".second-menu");
+        second_menu.style.height =
+          second_menu.offsetHeight == 135 ? "40px" : "135px";
+        companyImage.classList.toggle("rotate");
+      };
+      // calling the function
+      showCompany();
+      // listening for click events
+      features.addEventListener("click", showFeature);
+      company.addEventListener("click", showCompany);
+      // code for toggling desktop links
+      desktop_feature=document.querySelector('.desktop-feature')
+      desktop_company=document.querySelector('.desktop-company')
+      const showDesktopFeature=()=>{
+        desktop_feature_menu_list=document.querySelector('.desktop-feature .menu-list')
+        desktop_feature_menu_list.classList.toggle('active')
+        document.querySelector('.desktop-feature img').classList.toggle('active')
+     
+      }
+      const showDesktopCompany=()=>{
+       desktop_company_menu_list=document.querySelector('.desktop-company .menu-list')
+        desktop_company_menu_list.classList.toggle('active')
+               document.querySelector('.desktop-company img').classList.toggle('active')
+
+      }
+     desktop_feature.addEventListener('click',showDesktopFeature)
+     desktop_company.addEventListener('click',showDesktopCompany)
+    </script>
+  </body>
+</html>
